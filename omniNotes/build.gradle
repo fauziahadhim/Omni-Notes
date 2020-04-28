@@ -61,7 +61,7 @@ android {
         versionCode Integer.parseInt(project.VERSION_CODE)
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
-        multiDexEnabled false
+        multiDexEnabled true
     }
 
     testOptions {
@@ -124,6 +124,8 @@ android {
 }
 
 dependencies {
+    compile 'com.android.support:multidex:1.0.3'
+    
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-all:1.9.5'
     testImplementation 'org.powermock:powermock:1.6.5'
